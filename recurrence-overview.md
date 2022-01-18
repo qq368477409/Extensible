@@ -1,5 +1,12 @@
 # All About Recurrence!
 
+
+
+
+
+
+
+
 Recurrence is not easy to deal with in applications, and it is particularly tricky to offer as a feature of a general-purpose component. There are many different ways to implement it (with server integration being integral), and Calendar Pro's primary goal is to remain as flexible as possible. Thus I thought it would be worthwhile to provide an overview of some of the design decisions that went into the Extensible recurrence implementation and outline some strategies for integrating it into applications. Also, there simply aren't very many good resources available for tackling how to implement recurrence in general, so hopefully this will be a good resource for developers hoping to do so.
 
 ## Conceptual Design
@@ -38,6 +45,11 @@ Perusing these specs even for a few minutes might make your head spin. And these
 Another thing to keep in mind is that one of the primary goals of the RFC is to define specifications for *interoperability* between calendaring systems, which necessarily increases complexity. In most cases (and certainly in all cases supported directly by Calendar Pro) we won't be sending iCal-formatted data packets from one system to another &mdash; you will simply be persisting and retrieving event data to and from your own servers. In the event that you need to interact with a third-party API, you would be more concerned with that API's specific implementation than with the RFC. As such, unless you are actually authoring a public calendaring API (and if you are, I wish you luck :) much of the complexity in the specs can be safely ignored.  Let's walk through the details of how Calendar Pro addresses implementation.
 
 ### Rule 0
+
+
+
+
+
 
 Before we get started, let's get this out of the way right up front:
 
